@@ -11,4 +11,10 @@ const getData = async () => {
   return postArray;
 };
 
-export { getData };
+const getPostById = async (postId) => {
+  let response = await fetch(`${BASE_URL}/Post/${postId}.json`);
+  let data = await response.json();
+  return data;
+};
+
+export { getData, getPostById };
