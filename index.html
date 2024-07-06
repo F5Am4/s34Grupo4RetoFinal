@@ -53,7 +53,7 @@
 
         <!-- CODIGO DE JAIRO BERMEJO-->
         <!-- card create account & login (left)-->
-        <div id="login-card" class='d-none loggin-card card border-light-subtle text-start shadow-sm mx-3 col-md-auto'>
+        <div id="login-card" class='d-none loggin-card card border-light-subtle text-start shadow-sm col-md-auto'>
           <div class='card-body'>
             <h5 class='card-title pb-3 fw-bold fs-4'>DEV Community is a community of 1,666,666 amazing
               developers
@@ -239,31 +239,24 @@
 
           </div>
         </div>
-
-        <div class="col-md-auto">Variable width content</div>
-        <div class="col col-lg-2">3 of 3</div>
       </div>
       <!-- COLUMNA CENTRAL (POST) -->
       <div class="col">
-        <ul class="nav nav-underline">
-          <li class="nav-item">
-            <a
-              class="btn btn-morado fs-6 fw-bold"
-              aria-current="page"
-              href="#"
-              >Relevant</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="btn btn-morado fs-6 fw-bold" href="#">Latest</a>
-          </li>
-          <li class="nav-item">
-            <a class="btn btn-morado fs-6 fw-bold" href="#">Top</a>
-          </li>
-        </ul>
-        <div id="content-container" class="main-container col-md-auto">
+        <div class="main-container col-md-auto">
+          <div class="d-flex m-2">
+            <button class="btn btn-light">Relevant</button>
+            <button class="btn btn-light">Latest</button>
+            <button class="btn btn-light">Top</button>
+          </div>
           <div class="main-post-top card p-3 text-start">
-            <p><img src="./IMG/icons8-hand-30.png" alt="" width="20px">right here write whit little size letter</p>
+            <!-- TOP MINI-TEXT POST -->
+            <div class="d-flex justify-content-evenly text-start">
+              <p><img src="./IMG/icons8-hand-30.png" alt="" width="20px">right here write whit little size letter</p>
+           
+              <img src="./IMG/icons8-ellipsis-30.png" alt="" width="20px" height="20px">
+              <img src="./IMG/icons8-x-24.png" alt="" width="20px" height="20px">
+            
+          </div>
             <img src="./IMG/https___dev-to-uploads.s3.amazonaws.com_uploads_articles_v8vfdvpqozr6h7ctfo6k.avif" alt=""
               id="">
             <h2 id="">dev.to challenge</h2>
@@ -322,7 +315,7 @@
       </div>
       <!-- COLUMNA DERECHA (RIGHT-BAR) -->
       <div class="col mb-1 w-100">
-        <p>trending guides/resources</p>
+        <p class="font-monospace">trending guides/resources</p>
         <div class="list-group">
           <a href="#" class="list-group-item list-group-item-action">A simple default list group item</a>
           <a href="#" class="list-group-item list-group-item-action">A simple default list group item</a>
@@ -338,13 +331,6 @@
         </div>
         <div class="card"></div>
       </div>
-      <div class="col-md-auto">Variable width content</div>
-      <div class="col col-lg-2">3 of 3</div>
-    </div>
-    <div class="row">
-      <div class="col">1 of 3</div>
-      <div class="col-md-auto">Variable width content</div>
-      <div class="col col-lg-2">3 of 3</div>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
