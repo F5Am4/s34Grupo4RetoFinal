@@ -15,7 +15,7 @@ const getListPost = async () => {
   }, {});
 
   for (const tag in reorderPost) {
-    renderPostsByTag(tag, reorderPost[tag]);
+    renderPostsByTag(tag, reorderPost[tag].slice(0, 5));
   }
 };
 
@@ -41,7 +41,7 @@ const renderPostsByTag = (tag, posts) => {
   posts.forEach((post) => {
     const dataTag = document.createElement("li");
     const link = document.createElement("a");
-    link.setAttribute("href", `views/user-detail.html?userKey=${post.key}`);
+    link.setAttribute("href", `views/post-detail.html?postId=${post.key}`);
     link.textContent = post.Title;
     dataTag.append(link);
     list.append(dataTag);
