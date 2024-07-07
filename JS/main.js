@@ -28,7 +28,7 @@ const renderPostsByTag = (tag, posts) => {
   let postWrapper = document.getElementById("list-post-tags");
   const contentDiv = document.createElement("div");
   contentDiv.classList.add(
-    ..."card mb-4 border-light-subtle shadow-sm".split(" ")
+    ..."card mb-3 border-light-subtle shadow-sm".split(" ")
   );
 
   const tagHeader = document.createElement("h3");

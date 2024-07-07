@@ -15,42 +15,44 @@
   <nav class="navbar sticky-top bg-white shadow-sm border">
     <div class="container">
       <!-- DIV .INPUT-BAR -->
-      <div class="input-bar w-75">
-        <a class="navbar-brand" href="#">
+      <div class="row">
+      </div>
+      <div class="input-bar col-md-7 col-xl-8">
+        <a class="navbar-brand" href="/">
           <img class="border border-3 border-light rounded" src="./IMG/dev-black.png" alt="DEV" width="49"
             height="45" />
         </a>
         <input type="text" class="border rounded p-2 col-8" placeholder="Search..." />
       </div>
-      <div class="d-flex justify-content-end">
+      <div class="col-md-4 col-xl-4">
         <!-- DIV .LOGOUT-BUTTON-BAR -->
-        <div class="logut-button-bar me-4">
-          <button type="button" class="btn btn-outline-warning d-none" id="logoutHome"
-            onclick="window.location.href = 'index.html'">
-            Log out
-          </button>
-        </div>
-        <!-- DIV .LOGIN-BUTTON-BAR -->
-        <div class="login-button-bar">
-          <button type="button" class="login-button btn btn-outline-primary d-none" id="loginBtnNav"
-            onclick="window.location.href = 'VIEWS/loginpage.html'">
-            Log in
-          </button>
-          <img src="./IMG/icons8-bell-24.png" alt="Bell" />
-          <img id="avatar-login" class="img-thumbnail rounded-circle" width="35"
-            src="./IMG/imageslocomotionLogo123445666556756.png" alt="locomotion-logo" />
+        <div class="d-flex gap-3 justify-content-end">
+          <div class="logut-button-bar">
+            <button type="button" class="btn btn-outline-warning d-none" id="logoutHome"
+              onclick="window.location.href = 'index.html'">
+              Log out
+            </button>
+          </div>
+          <!-- DIV .LOGIN-BUTTON-BAR -->
+          <div class="login-button-bar">
+            <button type="button" class="login-button btn btn-outline-primary d-none" id="loginBtnNav"
+              onclick="window.location.href = 'VIEWS/loginpage.html'">
+              Log in
+            </button>
+            <img src="./IMG/icons8-bell-24.png" alt="Bell" />
+            <img id="avatar-login" class="img-thumbnail rounded-circle" width="35"
+              src="./IMG/imageslocomotionLogo123445666556756.png" alt="locomotion-logo" />
+          </div>
         </div>
       </div>
     </div>
   </nav>
-
   <!-- MAIN CONATINER (AQUI VAN LOS SIDE-BAR Y CENTRAL BAR)   -->
-  <div class="container text-center d-flex flex-row mb-3 p-3">
+  <div class="container">
     <!-- CONTENEDOR DE LOS LEFT, CENTRAL Y RIGHTBAR -->
-    <div class="row">
+    <div class="row  mb-3 p-3">
       <!-- LEFT-BAR -->
-      <div class="col">
-
+      <div class="col-sm-3 ps-5 d-none d-sm-block">
         <!-- CODIGO DE JAIRO BERMEJO-->
         <!-- card create account & login (left)-->
         <div id="login-card" class='d-none loggin-card card border-light-subtle text-start shadow-sm col-md-auto'>
@@ -223,39 +225,40 @@
         </div>
         <!-- AQUI VAN LOS TAGS -->
         <div class="my-tags col d-flex flex-column align-items-md-start mt-3">
-          <h5 class="p-1 rounded" href="#simple-list-item-1">My Tags</h5>
-          <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
-            data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary mt-3 rounded-2" tabindex="0">
-            <!-- <h4 id="scrollspyHeading1">First heading</h4> -->
-            <p>#myTags</p>
-            <!-- <h4 id="scrollspyHeading2">Second heading</h4> -->
-            <p>#myTags</p>
-            <!-- <h4 id="scrollspyHeading3">Third heading</h4> -->
-            <p>#myTags</p>
-            <!-- <h4 id="scrollspyHeading4">Fourth heading</h4> -->
-            <p>#myTags</p>
-            <!-- <h4 id="scrollspyHeading5">Fifth heading</h4> -->
-            <p>#myTags</p>
-
+          <h5 class="p-1 rounded" href="#simple-list-item-1">Popular Tags</h5>
+          <div class="aside-tags-list overflow-y-auto">
+            <ul>
+              <li><a>#tutorial</a></li>
+              <li><a>#webdev</a></li>
+              <li><a>#javascript</a></li>
+              <li><a>#beginners</a></li>
+              <li><a>#programming</a></li>
+              <li><a>#react</a></li>
+              <li><a>#python</a></li>
+              <li><a>#devops</a></li>
+              <li><a>#ai</a></li>
+              <li><a>#aws</a></li>
+              <li><a>#opensource</a></li>
+            </ul>
           </div>
         </div>
       </div>
       <!-- COLUMNA CENTRAL (POST) -->
-      <div class="col">
+      <div class="col-xs-12 col-sm-6">
         <div class="main-container col-md-auto">
           <div class="d-flex m-2">
             <button class="btn btn-light">Relevant</button>
             <button class="btn btn-light">Latest</button>
             <button class="btn btn-light">Top</button>
           </div>
-          <div class="main-post-top card p-3 text-start">
+          <div class="main-post-top card p-3 text-start mb-3">
             <!-- TOP MINI-TEXT POST -->
             <div class="d-flex text-start justify-content-evenly gap-5">
               <p><img src="./IMG/icons8-hand-30.png" alt="" width="20px">right here write whit little size letter</p>
-              
+
               <img src="./IMG/icons8-ellipsis-30.png" alt="" width="20px" height="20px">
               <img src="./IMG/icons8-x-24.png" alt="" width="20px" height="20px">
-              
+
             </div>
             <img src="./IMG/https___dev-to-uploads.s3.amazonaws.com_uploads_articles_v8vfdvpqozr6h7ctfo6k.avif" alt=""
               id="">
@@ -269,73 +272,21 @@
               <button type="button" class="btn btn-outline-primary">Check out the prompt</button>
             </div>
           </div>
-          <div class="main-post card text-start p-3">
-            <div class="d-flex justify-content-start">
-              <img class="rounded-circle" src="./IMG/imageslocomotionLogo123445666556756.png" alt="" width="20px"
-                height="20px">
-              <p>User# for Wasp</p>
-            </div>
-            <p>MM/DD</p>
-            <h2>Title for the all post under to the main post</h2>
-            <div class="list-tags d-flex gap-3">
-              <a class="text-decoration-none" href=""><span>#</span>tag</a>
-              <a class="text-decoration-none" href=""><span>#</span>tag</a>
-              <a class="text-decoration-none" href=""><span>#</span>tag</a>
-              <a class="text-decoration-none" href=""><span>#</span>tag</a>
-            </div>
-            <div class="">
-              <img src="./IMG/icons8-flame-30.png" alt="" width="20px"><a class="text-decoration-none"
-                href="">reactions</a>
-              <img src="./IMG/icons8-comments-30.png" alt="" width="20px"><a class="text-decoration-none"
-                href="">comments</a>
-            </div>
+          <div class="main-container col-md-auto">
+            <div id="main-post"></div>
           </div>
-          <div class="main-post card text-start p-3">##</div>
-          <div class="main-post card text-start p-3">##</div>
-          <div class="main-post card text-start p-3">##</div>
-          <div class="main-post card text-start p-3">##</div>
-          <div class="main-post card text-start p-3">##</div>
-          <div class="main-post card text-start p-3">##</div>
-          <div class="main-post card text-start p-3">##</div>
-          <div class="main-post card text-start p-3">##</div>
-          <div class="main-post card text-start p-3">##</div>
-          <div class="main-post card text-start p-3">##</div>
-          <div class="main-post card text-start p-3">##</div>
-          <div class="main-post card text-start p-3">##</div>
-          <div class="main-post card text-start p-3">##</div>
-          <div class="main-post card text-start p-3">##</div>
-          <div class="main-post card text-start p-3">##</div>
-          <div class="main-post card text-start p-3">##</div>
-          <div class="main-post card text-start p-3">##</div>
-          <div class="main-post card text-start p-3">##</div>
-          <div class="main-post card text-start p-3">##</div>
-          <div class="main-post card text-start p-3">##</div>
-
         </div>
       </div>
       <!-- COLUMNA DERECHA (RIGHT-BAR) -->
-      <div class="col">
-        <p class="font-monospace text-start">trending guides/resources</p>
-        <div class="list-group">
-          <a href="#" class="list-group-item list-group-item-action">A simple default list group item</a>
-          <a href="#" class="list-group-item list-group-item-action">A simple default list group item</a>
-          <a href="#" class="list-group-item list-group-item-action">A simple default list group item</a>
-          <a href="#" class="list-group-item list-group-item-action">A simple default list group item</a>
-          <a href="#" class="list-group-item list-group-item-action">A simple default list group item</a>
-          <a href="#" class="list-group-item list-group-item-action">A simple default list group item</a>
-          <a href="#" class="list-group-item list-group-item-action">A simple default list group item</a>
-          <a href="#" class="list-group-item list-group-item-action">A simple default list group item</a>
-          <a href="#" class="list-group-item list-group-item-action">A simple default list group item</a>
-          <a href="#" class="list-group-item list-group-item-action">A simple default list group item</a>
-          <a href="#" class="list-group-item list-group-item-action">A simple default list group item</a>
-        </div>
-        <div class="card"></div>
-    </div>
+      <div class="col-sm-3 d-none d-sm-block">
+        <div id="list-post-tags"></div>
+      </div>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+  <script src="JS/main.js" type="module"></script>
   <script src="JS/loggin.js" type="module"></script>
 </body>
 

@@ -233,6 +233,107 @@ $lightPurple: #3b49df;
     }
 }
 
+// Styles Home
+
+.aside-tags-list {
+    width: 100%;
+    height: 250px;
+    ul {
+        padding: 0;
+    }
+}
+
+.setting-menu, .other, .aside-tags-list {
+    ul {
+        li {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            height: 2.5rem;
+            box-sizing: border-box;
+            margin: 0!important;
+            padding: 0.5rem!important;
+            a {
+                color: $mediumGray;
+            }
+            &:hover {
+                background-color: #e2e1f3;
+                a {
+                    color: $purple;
+                    text-decoration: underline!important;
+                }
+            }
+            img {
+                width: 1rem;
+                margin-right: 0.5rem;
+            }
+        }
+    }
+}
+
+.other {
+    h4 {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+}
+
+.my-tags {
+    h5 {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+}
+
+.other-social-buttons {
+    label {
+        img {
+            width: 1.5rem;
+            opacity: 0.8;
+        }
+    }
+}
+
+
+// Syles Header
+
+.login-button-bar {
+    .login-button {
+        border: none;
+        color: $mediumGray;
+        &:hover, &:active, &:focus-visible {
+            background-color: rgb(59 73 223 / 10%);
+            color: $purple;
+            text-decoration: underline;
+        }
+    }
+}
+
+.logut-button-bar {
+    #logoutHome {
+        border: none;
+        color: $mediumGray;
+        &:hover, &:active{
+            background-color: rgb(59 73 223 / 10%);
+            color: $purple;
+            text-decoration: underline;
+        }
+    }
+}
+
+.input-bar {
+    @media only screen and (max-width:768px) {
+        input {
+            width: 120px;
+        }
+    }
+    
+    
+}
+
+
 @media only screen and (min-width:768px) {
     #content-post {
         .content {
