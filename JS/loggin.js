@@ -1,3 +1,4 @@
+import { renderAllPosts } from "./modules/components.js";
 import { getData, getPostById } from "./modules/requestsApi.js";
 
 let hasToken = localStorage.getItem("token");
@@ -57,74 +58,66 @@ if (logoutButton) {
 
 //export { hasToken, validateSession, loginButton, logoutButton, logout };
 
-//filtrar por reacciones
+// Filtrar por reacciones
 const filterPostByReaction = async () => {
   let post = await getData();
-  post.sort((min, max) => max.Reactions - min.Reactions);
-  console.log(post);
+  post.sort((min, max) => max.Reactions - min.Reactions); //ordenar post de mayor reaction a menor
+
+  //selecionar el id del html donde se insertaran los post filtrados
+  const container = document.getElementById("main-post");
+  container.textContent = "";
+
+  //iterar cada post y crear su card
+  post.forEach((post) => {
+    let postElement = renderAllPosts(post);
+    container.appendChild(postElement);
+  });
+
   return post;
 };
-filterPostByReaction();
 
+//filtrar por fecha
 const filterPostByDate = async () => {
   let post = await getData();
-  post.sort((min, max) => new Date(max.Date) - new Date(min.Date));
-  console.log(post);
+  post.sort((min, max) => new Date(max.Date) - new Date(min.Date)); //ordenar post por fecha
+
+  //selecionar el id del html donde se insertaran los post filtrados
+  const container = document.getElementById("main-post");
+  container.textContent = "";
+
+  //iterar cada post y crear su card
+  post.forEach((post) => {
+    let postElement = renderAllPosts(post);
+    container.appendChild(postElement);
+  });
+
   return post;
 };
-filterPostByDate();
 
 const filterPostByRelevant = async () => {
   let post = await getData();
-  post.sort((min, max) => max.Relevant - min.Relevant);
-  console.log(post);
+  post.sort((min, max) => max.Relevant - min.Relevant); //ordenar post de mayor relavant a menor
+
+  //selecionar el id del html donde se insertaran los post filtrados
+  const container = document.getElementById("main-post");
+  container.textContent = "";
+
+  //iterar cada post y crear su card
+  post.forEach((post) => {
+    let postElement = renderAllPosts(post);
+    container.appendChild(postElement);
+  });
+
   return post;
 };
-filterPostByRelevant();
 
-const updateContent = async (filter) => {
-  let filteredPosts;
-
-  switch (filter) {
-    case "reactions":
-      filteredPosts = await filterPostByReaction();
-      break;
-    case "date":
-      filteredPosts = await filterPostByDate();
-      break;
-    case "relevant":
-      filteredPosts = await filterPostByRelevant();
-      break;
-    default:
-      filteredPosts = await getData(); // Mostrar todos los posts por defecto
-  }
-
-  const contentContainer = document.getElementById("content-container");
-  contentContainer.innerHTML = ""; // Limpiar contenido anterior
-
-  filteredPosts.forEach((post) => {
-    contentContainer.innerHTML += `<p>${post.title} - Reactions: ${post.Reactions} - Date: ${post.Date} - Relevant: ${post.Relevant}</p>`;
-  });
-};
-
-document.addEventListener("DOMContentLoaded", () => {
-  const navBarPost = document.querySelectorAll(".nav-item a");
-
-  navBarPost.forEach((item) => {
-    item.addEventListener("click", async (event) => {
-      event.preventDefault();
-
-      // Remover la clase 'active' de todos los enlaces
-      navBarPost.forEach((remove) => remove.classList.remove("active"));
-
-      // Agregar la clase 'active' al enlace clicado
-      item.classList.add("active");
-
-      // Obtener el filtro desde el atributo data-filter
-      const filter = item.getAttribute("data-filter");
-
-      // Actualizar el contenido del contenedor central según el filtro seleccionado
-      await updateContent(filter);
-    });
-  });
-});
+//listener de los botones, al dar click en un boton activa su funcion correspondiente
+let filterByRelevan = document
+  .getElementById("filter-relevant")
+  .addEventListener("click", filterPostByRelevant);
+let filterByDate = document
+  .getElementById("filter-latest")
+  .addEventListener("click", filterPostByDate);
+let filterByReaction = document
+  .getElementById("filter-top")
+  .addEventListener("click", filterPostByReaction);
