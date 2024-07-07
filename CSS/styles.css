@@ -1,5 +1,37 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
+}
+
+.footer {
+  background-color: #e5e5e5;
+  font-size: 0.875rem;
+  padding: 3rem;
+  margin-top: 5rem;
+}
+.footer__legals {
+  color: #404040;
+  margin: 0;
+}
+.footer__link {
+  color: #3b49df;
+  text-decoration: none;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
+.footer__nav-links {
+  margin: 0;
+}
+.footer__nav-link {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.footer__nav-link:not(:last-child)::after {
+  content: "•";
+  font-size: 1.5rem;
+  padding: 0 0.5rem;
 }
 
 #list-post-tags .card .title-tag {
@@ -31,4 +63,140 @@
 }
 #list-post-tags .card .list-tags-aside li a:hover {
   color: #2f3ab2;
+}
+
+.image-post-detail {
+  width: 100%;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.content {
+  padding: 1.5rem;
+}
+
+.content-user {
+  display: flex;
+  margin-bottom: 1.4rem;
+}
+.content-user .image-user {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+.content-user p {
+  margin: 0;
+}
+
+.content-info-user {
+  margin-left: 0.75rem;
+  color: #404040;
+}
+.content-info-user .text-user {
+  font-weight: 700;
+}
+.content-info-user .date-post {
+  font-size: 0.75rem;
+  color: #717171;
+}
+
+.content-reactions {
+  display: flex;
+  align-items: center;
+  margin: 0.75rem;
+}
+.content-reactions .number-reactions {
+  padding-left: 0.5rem;
+}
+
+.post-title {
+  font-size: 1.85rem;
+  color: #171717;
+}
+
+.post-text .text {
+  color: #171717;
+  font-size: 1rem;
+}
+
+.content-tag {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+}
+.content-tag .tag {
+  border-radius: 0.5rem;
+  padding: 0.25rem;
+  color: #717171;
+  background-color: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.content-tag .tag:hover {
+  background-color: rgba(86, 39, 101, 0.1);
+  border: 1px solid rgba(86, 39, 101, 0.4);
+}
+
+#card-author {
+  border-top: 44px solid #171717 !important;
+  padding: 1rem 1rem 2rem;
+}
+#card-author .btn-primary {
+  background-color: #3b49df !important;
+  border: none !important;
+}
+#card-author .btn-primary:hover {
+  background-color: #2f3ab2 !important;
+}
+#card-author .content-info-author {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+#card-author .content-info-author .image-user {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+}
+#card-author .content-info-author .text {
+  margin: 0;
+  font-weight: 700;
+  color: #404040;
+  font-size: 1.25em;
+  padding-left: 0.75rem;
+}
+
+.image-datail {
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.image-post {
+  width: 100%;
+  border-radius: 0.5rem 0.5rem 0 0;
+  display: none;
+}
+
+.main-post:first-of-type .image-post {
+  display: block;
+}
+
+#main-post a {
+  text-decoration: none;
+}
+#main-post .post-title:hover {
+  color: #2f3ab2;
+}
+
+@media only screen and (min-width: 768px) {
+  #content-post .content {
+    padding: 2rem 4rem;
+  }
+  #content-post .post-title {
+    font-size: 3rem;
+  }
+  #content-post .post-text .text {
+    overflow-wrap: break-word;
+    font-size: 1.25rem;
+  }
 }/*# sourceMappingURL=styles.css.map */

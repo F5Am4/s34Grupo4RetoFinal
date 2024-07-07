@@ -15,12 +15,12 @@
   <nav class="navbar sticky-top bg-white shadow-sm border">
     <div class="container">
       <!-- DIV .INPUT-BAR -->
-      <div class="input-bar">
+      <div class="input-bar w-75">
         <a class="navbar-brand" href="#">
           <img class="border border-3 border-light rounded" src="./IMG/dev-black.png" alt="DEV" width="49"
             height="45" />
         </a>
-        <input type="text" class="border rounded p-2" placeholder="Search..." />
+        <input type="text" class="border rounded p-2 col-8" placeholder="Search..." />
       </div>
       <div class="d-flex justify-content-end">
         <!-- DIV .LOGOUT-BUTTON-BAR -->
@@ -47,7 +47,7 @@
   <!-- MAIN CONATINER (AQUI VAN LOS SIDE-BAR Y CENTRAL BAR)   -->
   <div class="container text-center d-flex flex-row mb-3 p-3">
     <!-- CONTENEDOR DE LOS LEFT, CENTRAL Y RIGHTBAR -->
-    <div class="row align-items-start">
+    <div class="row">
       <!-- LEFT-BAR -->
       <div class="col">
 
@@ -251,13 +251,13 @@
           <div id="main-post" class="main-container col-md-auto"></div>
           <div class="main-post-top card p-3 text-start">
             <!-- TOP MINI-TEXT POST -->
-            <div class="d-flex justify-content-evenly text-start">
+            <div class="d-flex text-start justify-content-evenly">
               <p><img src="./IMG/icons8-hand-30.png" alt="" width="20px">right here write whit little size letter</p>
-           
+              
               <img src="./IMG/icons8-ellipsis-30.png" alt="" width="20px" height="20px">
               <img src="./IMG/icons8-x-24.png" alt="" width="20px" height="20px">
-            
-          </div>
+              
+            </div>
             <img src="./IMG/https___dev-to-uploads.s3.amazonaws.com_uploads_articles_v8vfdvpqozr6h7ctfo6k.avif" alt=""
               id="">
             <h2 id="">dev.to challenge</h2>
@@ -315,9 +315,9 @@
         </div>
       </div>
       <!-- COLUMNA DERECHA (RIGHT-BAR) -->
-      <div class="col mb-1 w-100">
-        <p class="font-monospace">trending guides/resources</p>
-        <div class="list-group">
+      <div class="col">
+        <p class="font-monospace text-start">trending guides/resources</p>
+        <div class="list-group" id="list-post-tags">
           <a href="#" class="list-group-item list-group-item-action">A simple default list group item</a>
           <a href="#" class="list-group-item list-group-item-action">A simple default list group item</a>
           <a href="#" class="list-group-item list-group-item-action">A simple default list group item</a>
@@ -331,13 +331,13 @@
           <a href="#" class="list-group-item list-group-item-action">A simple default list group item</a>
         </div>
         <div class="card"></div>
-      </div>
+    </div>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-  <script src="JS/loggin.js" type="module"></script>
+  <script src="JS/main.js" type="module"></script>
 </body>
 
 </html>
