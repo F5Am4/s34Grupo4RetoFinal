@@ -1,296 +1,651 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./CSS/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <title>Test Work Final</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./CSS/styles.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-  <title>Test Work Final</title>
-</head>
-
-<body class="bg-body-tertiary">
-  <!-- NAV-BAR -->
-  <nav class="navbar sticky bg-white shadow-sm border">
-    <div class="container justify-content-evenly">
-      <!-- DIV .INPUT-BAR -->
-      <div class="input-bar col-8">
-        <a class="navbar-brand" href="#">
-          <img class="border border-3 border-light rounded" src="./IMG/dev-black.png" alt="DEV" width="49"
-            height="45" />
-        </a>
-        <input id="searchBar" type="text" class="border rounded p-2 col-9 sticky-top bg-white" placeholder="Search..." />
-      </div>
-      <div class="col-4 d-flex justify-content-end">
-        <!-- BOTON CREATE-POST -->
-        <div class="create-post me-4">
-          <button class="btn btn-outline-primary" id="createPost" onclick="window.location.href = 'VIEWS/userPost.html'">Create Post</button>
-          
-        </div>
-        <!-- DIV .LOGOUT-BUTTON-BAR -->
-        <div class="logut-button-bar me-4">
-          <button type="button" class="btn btn-outline-warning d-none" id="logoutHome"
-            onclick="window.location.href = 'index.html'">
-            Log out
+  <body class="bg-body-tertiary">
+    <!-- NAV-BAR -->
+    <nav class="navbar sticky bg-white shadow-sm border">
+      <div class="container justify-content-evenly">
+        <!-- DIV .INPUT-BAR -->
+        <div
+          class="d-flex justify-content-start justify-content-md-between ps-2 input-bar col-8"
+        >
+          <button
+            class="navbar-toggler ms-3 d-sm-block d-md-none"
+            type="button"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            data-bs-toggle="offcanvas"
+            href="#navbarSupportedContent"
+            role="button"
+          >
+            <span class="navbar-toggler-icon" height="40"></span>
           </button>
+
+          <a class="navbar-brand" href="#">
+            <img
+              class="border border-3 border-light rounded"
+              src="./IMG/dev-black.png"
+              alt="DEV"
+              width="49"
+              height="45"
+            />
+            <div
+              class="offcanvas offcanvas-start d-lg-none"
+              data-bs-scroll="true"
+              data-bs-backdrop="false"
+              id="navbarSupportedContent"
+              tabindex="-1"
+              aria-labelledby="navbarSupportedContentLabel"
+            >
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="navbarSupportedContentLabel">
+                  Dev Community
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="offcanvas"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="offcanvas-body p-0">
+                <div class="ps-2 pe-2">
+                  <div class="setting-menu">
+                    <ul
+                      class="d-flex flex-column align-items-md-start list-group mt-3 list-unstyled"
+                    >
+                      <li class="p-1">
+                        <img class="" src="./IMG/icons8-home-30.png" alt="" />
+                        <a
+                          class="text-black link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                          href=""
+                          >Home</a
+                        >
+                      </li>
+                      <li class="p-1">
+                        <img class="" src="./IMG/icons8-book-30.png" alt="" />
+                        <a
+                          class="text-black link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                          href=""
+                          >Reading List</a
+                        >
+                      </li>
+                      <li class="p-1">
+                        <img
+                          class=""
+                          src="./IMG/icons8-podcast-30.png"
+                          alt=""
+                        />
+                        <a
+                          class="text-black link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                          href=""
+                          >Podcast</a
+                        >
+                      </li>
+                      <li class="p-1">
+                        <img
+                          class=""
+                          src="./IMG/icons8-video-camera-30.png"
+                          alt=""
+                        />
+                        <a
+                          class="text-black link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                          href=""
+                          >Videos</a
+                        >
+                      </li>
+                      <li class="p-1">
+                        <img class="" src="./IMG/icons8-tags-30.png" alt="" />
+                        <a
+                          class="text-black link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                          href=""
+                          >Tags</a
+                        >
+                      </li>
+                      <li class="p-1">
+                        <img class="" src="./IMG/icons8-light-30.png" alt="" />
+                        <a
+                          class="text-black link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                          href=""
+                          >DEV Help</a
+                        >
+                      </li>
+                      <li class="p-1">
+                        <img
+                          class=""
+                          src="./IMG/icons8-shopping-basket-30.png"
+                          alt=""
+                        />
+                        <a
+                          class="text-black link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                          href=""
+                          >Forem Shop</a
+                        >
+                      </li>
+                      <li class="p-1">
+                        <img class="" src="./IMG/icons8-love-30.png" alt="" />
+                        <a
+                          class="text-black link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                          href=""
+                          >Advertise on DEV</a
+                        >
+                      </li>
+                      <li class="p-1">
+                        <img class="" src="./IMG/icons8-trophy-30.png" alt="" />
+                        <a
+                          class="text-black link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                          href=""
+                          >DEV Challenges</a
+                        >
+                      </li>
+                      <li class="p-1">
+                        <img class="" src="./IMG/icons8-shine-32.png" alt="" />
+                        <a
+                          class="text-black link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                          href=""
+                          >DEV Showcase</a
+                        >
+                      </li>
+                      <li class="p-1">
+                        <img class="" src="./IMG/icons8-about-32.png" alt="" />
+                        <a
+                          class="text-black link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                          href=""
+                          >About</a
+                        >
+                      </li>
+                      <li class="p-1">
+                        <img
+                          class=""
+                          src="./IMG/icons8-contact-30.png"
+                          alt=""
+                        />
+                        <a
+                          class="text-black link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                          href=""
+                          >Contact</a
+                        >
+                      </li>
+                      <li class="p-1">
+                        <img
+                          class=""
+                          src="./IMG/icons8-edit-property-30.png"
+                          alt=""
+                        />
+                        <a
+                          class="text-black link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                          href=""
+                          >Guides</a
+                        >
+                      </li>
+                      <li class="p-1">
+                        <img
+                          class=""
+                          src="./IMG/icons8-thinking-30.png"
+                          alt=""
+                        />
+                        <a
+                          class="text-black link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                          href=""
+                          >Software Comparisons</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <div
+                    class="other d-flex flex-column align-items-md-start mt-3"
+                  >
+                    <h4>Other</h4>
+                    <ul
+                      class="d-flex flex-column align-items-md-start list-group list-unstyled"
+                    >
+                      <li class="mt-3">
+                        <a
+                          class="text-black link-offset-2 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                          href=""
+                        >
+                          <img src="./IMG/icons8-thumb-up-32.png" alt="" />
+                          Code of Conduct</a
+                        >
+                      </li>
+                      <li class="mt-3">
+                        <a
+                          class="text-black link-offset-2 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                          href=""
+                        >
+                          <img src="./IMG/icons8-nerd-30.png" alt="" />
+                          Privacy Policy</a
+                        >
+                      </li>
+                      <li class="mt-3">
+                        <a
+                          class="text-black link-offset-2 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                          href=""
+                        >
+                          <img src="./IMG/icons8-eyes-30.png" alt="" />
+                          Terms of use</a
+                        >
+                      </li>
+                      <div
+                        class="other-social-buttons mt-3 d-flex justify-content-between gap-2"
+                      >
+                        <label for=""
+                          ><img
+                            class="x-button-logo"
+                            src="./IMG/icons8-x-30.png"
+                            alt="X"
+                        /></label>
+                        <label for=""
+                          ><img
+                            class="facebook-button-logo"
+                            src="./IMG/icons8-facebook-30.png"
+                            alt="facebook"
+                        /></label>
+                        <label for=""
+                          ><img
+                            class="github-button-logo"
+                            src="./IMG/icons8-github-30.png"
+                            alt="github"
+                        /></label>
+                        <label for=""
+                          ><img
+                            class="instagram-button-logo"
+                            src="./IMG/icons8-instagram-30.png"
+                            alt="instagram"
+                        /></label>
+                        <label for=""
+                          ><img
+                            class="twitch-button-logo"
+                            src="./IMG/icons8-twitch-30.png"
+                            alt="twitch"
+                        /></label>
+                        <label for=""
+                          ><img
+                            class="mastodon-button-logo"
+                            src="./IMG/icons8-mastodon-32.png"
+                            alt="mastodon"
+                        /></label>
+                      </div>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+          <input
+            id="searchBar"
+            type="text"
+            class="border rounded p-2 col-9 sticky-top bg-white"
+            placeholder="Search..."
+          />
         </div>
-        <!-- DIV .LOGIN-BUTTON-BAR -->
-        <div class="login-button-bar">
-          <button type="button" class="login-button btn btn-outline-primary d-none" id="loginBtnNav"
-            onclick="window.location.href = 'VIEWS/loginPage.html'">
-            Log in
-          </button>
-          <img src="./IMG/icons8-bell-24.png" alt="Bell" />
-          <img id="avatar-login" class="img-thumbnail rounded-circle" width="35"
-            src="./IMG/imageslocomotionLogo123445666556756.png" alt="locomotion-logo" />
+        <div class="col-4 d-flex justify-content-end">
+          <!-- BOTON CREATE-POST -->
+          <div class="create-post me-4">
+            <button
+              class="btn btn-outline-primary"
+              id="createPost"
+              onclick="window.location.href = 'VIEWS/userPost.html'"
+            >
+              Create Post
+            </button>
+          </div>
+          <!-- DIV .LOGOUT-BUTTON-BAR -->
+          <div class="logut-button-bar me-4">
+            <button
+              type="button"
+              class="btn btn-outline-warning d-none"
+              id="logoutHome"
+              onclick="window.location.href = 'index.html'"
+            >
+              Log out
+            </button>
+          </div>
+          <!-- DIV .LOGIN-BUTTON-BAR -->
+          <div class="login-button-bar">
+            <button
+              type="button"
+              class="login-button btn btn-outline-primary d-none"
+              id="loginBtnNav"
+              onclick="window.location.href = 'VIEWS/loginPage.html'"
+            >
+              Log in
+            </button>
+            <img src="./IMG/icons8-bell-24.png" alt="Bell" />
+            <img
+              id="avatar-login"
+              class="img-thumbnail rounded-circle"
+              width="35"
+              src="./IMG/imageslocomotionLogo123445666556756.png"
+              alt="locomotion-logo"
+            />
+          </div>
         </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-  <!-- MAIN CONATINER (AQUI VAN LOS SIDE-BAR Y CENTRAL BAR)   -->
-  <div class="container text-center d-flex flex-row mb-3 p-3">
-    <!-- CONTENEDOR DE LOS LEFT, CENTRAL Y RIGHTBAR -->
-    <div class="row">
-      <!-- LEFT-BAR -->
-      <div class="col">
-
-        <!-- CODIGO DE JAIRO BERMEJO-->
-        <!-- card create account & login (left) -->
-        <div id="login-card" class='d-none loggin-card card border-light-subtle text-start shadow-sm col-md-auto'>
-          <div class='card-body'>
-            <h5 class='card-title pb-3 fw-bold fs-4'>DEV Community is a community of 1,666,666 amazing
-              developers
-            </h5>
-            <p class='card-text text-secondary'>We're a place where coders share, stay up-to-date
-              and grow their careers.
-            </p>
-            <div class='d-flex flex-column gap-1'>
-              <button type='button' class='btn btn-outline-primary'>Create account</button>
-              <a href='VIEWS/loginPage.html' class='w-100'>
-                <button id="loginhome" type='button' class='btn btn-login w-100'>Log in</button>
-              </a>
+    <!-- MAIN CONATINER (AQUI VAN LOS SIDE-BAR Y CENTRAL BAR)   -->
+    <div class="container text-center d-flex flex-row mb-3 p-3">
+      <!-- CONTENEDOR DE LOS LEFT, CENTRAL Y RIGHTBAR -->
+      <div class="row">
+        <!-- LEFT-BAR -->
+        <div class="d-none d-md-block col-md-4 col-lg-3 flex-column">
+          <!-- CODIGO DE JAIRO BERMEJO-->
+          <!-- card create account & login (left) -->
+          <div
+            id="login-card"
+            class="d-none loggin-card card border-light-subtle text-start shadow-sm col-md-auto"
+          >
+            <div class="card-body">
+              <h5 class="card-title pb-3 fw-bold fs-4">
+                DEV Community is a community of 1,666,666 amazing developers
+              </h5>
+              <p class="card-text text-secondary">
+                We're a place where coders share, stay up-to-date and grow their
+                careers.
+              </p>
+              <div class="d-flex flex-column gap-1">
+                <button type="button" class="btn btn-outline-primary">
+                  Create account
+                </button>
+                <a href="VIEWS/loginPage.html" class="w-100">
+                  <button
+                    id="loginhome"
+                    type="button"
+                    class="btn btn-login w-100"
+                  >
+                    Log in
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- MENU LISTA SETTINGS -->
+          <div class="setting-menu">
+            <ul
+              class="d-flex flex-column align-items-md-start list-group mt-3 list-unstyled"
+            >
+              <li class="p-1">
+                <img class="" src="./IMG/icons8-home-30.png" alt="" />
+                <a
+                  class="text-black link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                  href=""
+                  >Home</a
+                >
+              </li>
+              <li class="p-1">
+                <img class="" src="./IMG/icons8-book-30.png" alt="" />
+                <a
+                  class="text-black link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                  href=""
+                  >Reading List</a
+                >
+              </li>
+              <li class="p-1">
+                <img class="" src="./IMG/icons8-podcast-30.png" alt="" />
+                <a
+                  class="text-black link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                  href=""
+                  >Podcast</a
+                >
+              </li>
+              <li class="p-1">
+                <img class="" src="./IMG/icons8-video-camera-30.png" alt="" />
+                <a
+                  class="text-black link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                  href=""
+                  >Videos</a
+                >
+              </li>
+              <li class="p-1">
+                <img class="" src="./IMG/icons8-tags-30.png" alt="" />
+                <a
+                  class="text-black link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                  href=""
+                  >Tags</a
+                >
+              </li>
+              <li class="p-1">
+                <img class="" src="./IMG/icons8-light-30.png" alt="" />
+                <a
+                  class="text-black link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                  href=""
+                  >DEV Help</a
+                >
+              </li>
+              <li class="p-1">
+                <img
+                  class=""
+                  src="./IMG/icons8-shopping-basket-30.png"
+                  alt=""
+                />
+                <a
+                  class="text-black link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                  href=""
+                  >Forem Shop</a
+                >
+              </li>
+              <li class="p-1">
+                <img class="" src="./IMG/icons8-love-30.png" alt="" />
+                <a
+                  class="text-black link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                  href=""
+                  >Advertise on DEV</a
+                >
+              </li>
+              <li class="p-1">
+                <img class="" src="./IMG/icons8-trophy-30.png" alt="" />
+                <a
+                  class="text-black link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                  href=""
+                  >DEV Challenges</a
+                >
+              </li>
+              <li class="p-1">
+                <img class="" src="./IMG/icons8-shine-32.png" alt="" />
+                <a
+                  class="text-black link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                  href=""
+                  >DEV Showcase</a
+                >
+              </li>
+              <li class="p-1">
+                <img class="" src="./IMG/icons8-about-32.png" alt="" />
+                <a
+                  class="text-black link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                  href=""
+                  >About</a
+                >
+              </li>
+              <li class="p-1">
+                <img class="" src="./IMG/icons8-contact-30.png" alt="" />
+                <a
+                  class="text-black link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                  href=""
+                  >Contact</a
+                >
+              </li>
+              <li class="p-1">
+                <img class="" src="./IMG/icons8-edit-property-30.png" alt="" />
+                <a
+                  class="text-black link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                  href=""
+                  >Guides</a
+                >
+              </li>
+              <li class="p-1">
+                <img class="" src="./IMG/icons8-thinking-30.png" alt="" />
+                <a
+                  class="text-black link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                  href=""
+                  >Software Comparisons</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="other d-flex flex-column align-items-md-start mt-3">
+            <h4>Other</h4>
+            <ul
+              class="d-flex flex-column align-items-md-start list-group list-unstyled"
+            >
+              <li class="mt-3">
+                <a
+                  class="text-black link-offset-2 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                  href=""
+                >
+                  <img src="./IMG/icons8-thumb-up-32.png" alt="" />
+                  Code of Conduct</a
+                >
+              </li>
+              <li class="mt-3">
+                <a
+                  class="text-black link-offset-2 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                  href=""
+                >
+                  <img src="./IMG/icons8-nerd-30.png" alt="" />
+                  Privacy Policy</a
+                >
+              </li>
+              <li class="mt-3">
+                <a
+                  class="text-black link-offset-2 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                  href=""
+                >
+                  <img src="./IMG/icons8-eyes-30.png" alt="" />
+                  Terms of use</a
+                >
+              </li>
+              <div
+                class="other-social-buttons mt-3 d-flex justify-content-between gap-2"
+              >
+                <label for=""
+                  ><img
+                    class="x-button-logo"
+                    src="./IMG/icons8-x-30.png"
+                    alt="X"
+                /></label>
+                <label for=""
+                  ><img
+                    class="facebook-button-logo"
+                    src="./IMG/icons8-facebook-30.png"
+                    alt="facebook"
+                /></label>
+                <label for=""
+                  ><img
+                    class="github-button-logo"
+                    src="./IMG/icons8-github-30.png"
+                    alt="github"
+                /></label>
+                <label for=""
+                  ><img
+                    class="instagram-button-logo"
+                    src="./IMG/icons8-instagram-30.png"
+                    alt="instagram"
+                /></label>
+                <label for=""
+                  ><img
+                    class="twitch-button-logo"
+                    src="./IMG/icons8-twitch-30.png"
+                    alt="twitch"
+                /></label>
+                <label for=""
+                  ><img
+                    class="mastodon-button-logo"
+                    src="./IMG/icons8-mastodon-32.png"
+                    alt="mastodon"
+                /></label>
+              </div>
+            </ul>
+          </div>
+          <!-- AQUI VAN LOS TAGS -->
+          <div class="my-tags col d-flex flex-column align-items-md-start mt-3">
+            <h5 class="p-1 rounded" href="#simple-list-item-1">My Tags</h5>
+            <div
+              data-bs-spy="scroll"
+              data-bs-target="#navbar-example2"
+              data-bs-root-margin="0px 0px -40%"
+              data-bs-smooth-scroll="true"
+              class="scrollspy-example bg-body-tertiary mt-3 rounded-2"
+              tabindex="0"
+            >
+              <!-- <h4 id="scrollspyHeading1">First heading</h4> -->
+              <p>#myTags</p>
+              <!-- <h4 id="scrollspyHeading2">Second heading</h4> -->
+              <p>#myTags</p>
+              <!-- <h4 id="scrollspyHeading3">Third heading</h4> -->
+              <p>#myTags</p>
+              <!-- <h4 id="scrollspyHeading4">Fourth heading</h4> -->
+              <p>#myTags</p>
+              <!-- <h4 id="scrollspyHeading5">Fifth heading</h4> -->
+              <p>#myTags</p>
+            </div>
+          </div>
+          <!-- CARD DEV COMMUNITY -->
+          <div class="dev-community card p-3">
+            <div class="content-text-community d-flex justify-content-between">
+              <div class="text-community text-start">
+                <p>DEV Community</p>
+              </div>
+              <div class="ellipse-logo-button">
+                <label for=""
+                  ><img src="./IMG/icons8-ellipsis-30.png" alt="" width="15px"
+                /></label>
+              </div>
+            </div>
+            <div class="text-description-card text-start">
+              <h4>
+                Easiest way to help the DEV community deel more like a
+                community?
+              </h4>
+            </div>
+            <div class="text-low-card text-start">
+              <p>
+                Head over to our <a href="">Welcome Thread</a> greet some new
+                DEV members!
+              </p>
             </div>
           </div>
         </div>
-        <!-- MENU LISTA SETTINGS -->
-        <div class="setting-menu">
-          <ul class="d-flex flex-column align-items-md-start list-group mt-3 list-unstyled">
-            <li class="p-1">
-
-              <img class="" src="./IMG/icons8-home-30.png" alt=""></svg>
-              <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
-                href="">Home
-
-              </a>
-            </li>
-            <li class="p-1">
-
-              <img class="" src="./IMG/icons8-book-30.png" alt=""></svg>
-              <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover""
-                  href=""
-                  >Reading List
-              
-              </a>
-            </li>
-              <li class=" p-1">
-
-                <img class="" src="./IMG/icons8-podcast-30.png" alt=""></svg>
-                <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover""
-                  href=""
-                  >Podcast
-              
-              </a>
-            </li>
-              <li class=" p-1">
-
-                  <img class="" src="./IMG/icons8-video-camera-30.png" alt=""></svg>
-                  <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover""
-                  href=""
-                  >Videos
-              
-              </a>
-            </li>
-              <li class=" p-1">
-
-                    <img class="" src="./IMG/icons8-tags-30.png" alt=""></svg>
-                    <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover""
-                  href=""
-                  >Tags
-              
-              </a>
-            </li>
-              <li class=" p-1">
-
-                      <img class="" src="./IMG/icons8-light-30.png" alt=""></svg>
-                      <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
-                        href="">DEV Help
-
-                      </a>
-            </li>
-            <li class="p-1">
-
-              <img class="" src="./IMG/icons8-shopping-basket-30.png" alt=""></svg>
-              <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
-                href="">Forem Shop
-
-              </a>
-            </li>
-            <li class="p-1">
-
-              <img class="" src="./IMG/icons8-love-30.png" alt=""></svg>
-              <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
-                href="">Advertise on DEV
-
-              </a>
-            </li>
-            <li class="p-1">
-
-              <img class="" src="./IMG/icons8-trophy-30.png" alt=""></svg>
-              <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
-                href="">DEV Challenges
-
-              </a>
-            </li>
-            <li class="p-1">
-
-              <img class="" src="./IMG/icons8-shine-32.png" alt=""></svg>
-              <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
-                href="">DEV Showcase
-
-              </a>
-            </li>
-            <li class="p-1">
-
-              <img class="" src="./IMG/icons8-about-32.png" alt=""></svg>
-              <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
-                href="">About
-
-              </a>
-            </li>
-            <li class="p-1">
-
-              <img class="" src="./IMG/icons8-contact-30.png" alt=""></svg>
-              <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
-                href="">Contact
-
-              </a>
-            </li>
-            <li class="p-1">
-
-              <img class="" src="./IMG/icons8-edit-property-30.png" alt=""></svg>
-              <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
-                href="">Guides
-
-              </a>
-            </li>
-            <li class="p-1">
-
-              <img class="" src="./IMG/icons8-thinking-30.png" alt=""></svg>
-              <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
-                href="">Software Comparisons
-
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="other d-flex flex-column align-items-md-start mt-3">
-          <h4>Other</h4>
-          <ul class="d-flex flex-column align-items-md-start list-group list-unstyled">
-            <li class="mt-3"><a
-                class="link-offset-2 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
-                href="">
-                <img src="./IMG/icons8-thumb-up-32.png" alt="">
-                Code of Conduct</a></li>
-            <li class="mt-3"><a
-                class="link-offset-2 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
-                href="">
-                <img src="./IMG/icons8-nerd-30.png" alt="">
-                Privacy Policy</a></li>
-            <li class="mt-3"><a
-                class="link-offset-2 link-offset-1-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
-                href="">
-                <img src="./IMG/icons8-eyes-30.png" alt="">
-                Terms of use</a></li>
-            <div class="other-social-buttons mt-3 d-flex justify-content-between gap-3">
-              <label for=""><img class="x-button-logo" src="./IMG/icons8-x-30.png" alt="X" /></label>
-              <label for=""><img class="facebook-button-logo" src="./IMG/icons8-facebook-30.png"
-                  alt="facebook" /></label>
-              <label for=""><img class="github-button-logo" src="./IMG/icons8-github-30.png" alt="github" /></label>
-              <label for=""><img class="instagram-button-logo" src="./IMG/icons8-instagram-30.png"
-                  alt="instagram" /></label>
-              <label for=""><img class="twitch-button-logo" src="./IMG/icons8-twitch-30.png" alt="twitch" /></label>
-              <label for=""><img class="mastodon-button-logo" src="./IMG/icons8-mastodon-32.png"
-                  alt="mastodon" /></label>
+        <!-- COLUMNA CENTRAL (POST) -->
+        <div class="col-12 col-md-8 col-lg-6 d-flex flex-column gap-2">
+          <div class="main-container col-md-auto">
+            <div class="d-flex m-2">
+              <button id="filter-relevant" class="btn btn-light">
+                Relevant
+              </button>
+              <button id="filter-latest" class="btn btn-light">Latest</button>
+              <button id="filter-top" class="btn btn-light">Top</button>
             </div>
-          </ul>
-        </div>
-        <!-- AQUI VAN LOS TAGS -->
-        <div class="my-tags col d-flex flex-column align-items-md-start mt-3">
-          <h5 class="p-1 rounded" href="#simple-list-item-1">My Tags</h5>
-          <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
-            data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary mt-3 rounded-2" tabindex="0">
-            <!-- <h4 id="scrollspyHeading1">First heading</h4> -->
-            <p>#myTags</p>
-            <!-- <h4 id="scrollspyHeading2">Second heading</h4> -->
-            <p>#myTags</p>
-            <!-- <h4 id="scrollspyHeading3">Third heading</h4> -->
-            <p>#myTags</p>
-            <!-- <h4 id="scrollspyHeading4">Fourth heading</h4> -->
-            <p>#myTags</p>
-            <!-- <h4 id="scrollspyHeading5">Fifth heading</h4> -->
-            <p>#myTags</p>
-
+            <div id="main-post" class="main-container col-md-auto"></div>
           </div>
         </div>
-        <!-- CARD DEV COMMUNITY -->
-        <div class="dev-community card p-3">
-          <div class="content-text-community d-flex justify-content-between">
-          <div class="text-community text-start">
-            <p>DEV Community</p>
-          </div>
-          <div class="ellipse-logo-button">
-            <label for=""><img src="./IMG/icons8-ellipsis-30.png" alt="" width="15px"></label>
-          </div>
-        </div>
-          <div class="text-description-card text-start">
-            <h4>Easiest way to help the DEV community deel more like a community?</h4>
-          </div>
-          <div class="text-low-card text-start">
-            <p>Head over to our <a href="">Welcome Thread</a> greet some new DEV members!</p>
-          </div>
+        <!-- COLUMNA DERECHA (RIGHT-BAR) -->
+        <div class="d-none d-lg-block col-lg-3 text-wrap">
+          <p class="font-monospace text-start">trending guides/resources</p>
+          <div class="list-group col" id="list-post-tags"></div>
+          <div class="card"></div>
         </div>
       </div>
-      <!-- COLUMNA CENTRAL (POST) -->
-      <div class="col-md-6">
-        <div class="main-container col-md-auto">
-          <div class="d-flex m-2">
-            <button id="filter-relevant" class="btn btn-light">Relevant</button>
-            <button id="filter-latest" class="btn btn-light">Latest</button>
-            <button id="filter-top" class="btn btn-light">Top</button>
-          </div>
-          <div id="main-post" class="main-container col-md-auto"></div>
-          
-          
-
-        </div>
-      </div>
-      <!-- COLUMNA DERECHA (RIGHT-BAR) -->
-      <div class="col">
-        <p class="font-monospace text-start">trending guides/resources</p>
-        <div class="list-group col" id="list-post-tags">
-          
-        </div>
-        <div class="card"></div>
     </div>
-    </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-  <script src="JS/main.js" type="module"></script>
-  <script src="./JS/loggin.js"></script>
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="JS/main.js" type="module"></script>
+    <script src="./JS/loggin.js"></script>
+  </body>
 </html>

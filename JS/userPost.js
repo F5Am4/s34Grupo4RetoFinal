@@ -1,5 +1,11 @@
 import { createPost, getUser } from "./modules/requestsApi.js";
 
+let hasToken = localStorage.getItem("token");
+
+if (!hasToken) {
+  window.location.href = "/VIEWS/loginPage.html";
+}
+
 let postObject = {};
 
 let infoPosts = document.querySelectorAll("#card-form input");
